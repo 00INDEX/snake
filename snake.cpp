@@ -28,7 +28,7 @@ int main(){
 			x = x_temp;
 			y = y_temp;
 		}
-		void worldMake() {
+		void worldMake() {//地图绘制
 			for (int y_counter = 0; y_counter <= Y_MAX + 2; y_counter++) {
 				if (y_counter == 0 || y_counter == Y_MAX + 2) {
 					for (int x_counter = 0; x_counter <= X_MAX + 2; x_counter++) {
@@ -44,7 +44,7 @@ int main(){
 				cout << endl;
 			}
 		}
-		void changePosition() {
+		void changePosition() {//控制函数
 			
 			for (int i = 1; i >= 0; i++) {
 				world[x][y] = 0;
@@ -96,9 +96,11 @@ int main(){
 	cin.get();
 	return 0;
 }
+//清屏
 void screenClear() {
 	system("cls");
 }
+//隐藏光标
 void hideshrink() {
 	HANDLE hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 	CONSOLE_CURSOR_INFO ConsoleCursorInfo;
